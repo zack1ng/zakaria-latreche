@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="detail-head">
+  <h1>{{ page.title }}</h1>
+  <div class="tag {{ page.status }}">{{ page.status | upcase }}</div>
+</div>
+
+<div class="detail-hero"><span>preview</span></div>
+
+<div class="detail-keywords">
+  {% for tag in page.tags %}
+    <span>{{ tag }}</span>
+  {% endfor %}
+</div>
+
+<div class="detail-body">
+  {{ content }}
+</div>

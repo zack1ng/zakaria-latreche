@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: "Blyat" }} — Blyat</title>
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="{{ '/' | relative_url }}#projects">Projects</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    {{ content }}
+  </div>
+
+  <footer id="contact">
+    Reach me at <a href="mailto:you@example.com">you@example.com</a> — swap in your real email, GitHub, and blog links.
+  </footer>
+
+</body>
+</html>

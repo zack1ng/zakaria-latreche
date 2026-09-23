@@ -1,0 +1,49 @@
+---
+layout: default
+title: Home
+---
+
+<div class="intro">
+  <p class="roles">Embedded Systems Engineer | Robotics Software (self-taught)</p>
+  <p>I'm working toward robotics software engineering by building the layer
+  between hardware and behavior — STM32 drivers, sensor fusion, and ROS2
+  control stacks for robots that have to actually move. No formal program;
+  everything below runs on real boards or in simulation.</p>
+  <p class="cta">Interested in embedded robotics or ROS2 control architecture? Let's talk.</p>
+  <div class="links">
+    github: <a href="https://github.com/" target="_blank" rel="noopener">@yourhandle</a><br>
+    email: <a href="mailto:you@example.dev">you [at] example [dot] dev</a>
+  </div>
+</div>
+{% assign latest = site.posts.first %}
+{% if latest %}
+<div class="latest-post">
+  <div class="label">LATEST FROM THE BLOG</div>
+  <a href="{{ latest.url | relative_url }}" class="title">{{ latest.title }}</a>
+  <span class="date"> · {{ latest.date | date: "%Y-%m-%d" }}</span>
+  <p class="excerpt">{{ latest.excerpt | strip_html | truncate: 220 }}</p>
+  <div class="read-more">
+    <a href="{{ latest.url | relative_url }}">Read post →</a>
+  </div>
+</div>
+{% endif %}
+
+<section id="projects">
+  <div class="grid">
+    {% for project in site.projects %}
+    <a class="card {{ project.status }}" href="{{ project.url | relative_url }}">
+      <div class="card-top">
+        <div class="tag {{ project.status }}">{{ project.status | upcase }}</div>
+        <div class="card-title">{{ project.title }}</div>
+      </div>
+      <div class="card-preview"><span>preview</span></div>
+      <div class="card-body">{{ project.excerpt | strip_html | truncate: 140 }}</div>
+      <div class="card-keywords">
+        {% for tag in project.tags %}
+        <span>{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

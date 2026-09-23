@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="detail-head">
+  <h1>{{ page.title }}</h1>
+</div>
+
+<div class="post-date">{{ page.date | date: "%Y-%m-%d" }}</div>
+
+<div class="detail-body">
+  {{ content }}
+</div>
+
+<div class="detail-links">
+  <a href="{{ '/blog/' | relative_url }}">← Back to blog</a>
+</div>
