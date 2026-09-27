@@ -36,8 +36,14 @@ title: Home
         <div class="tag {{ project.status }}">{{ project.status | upcase }}</div>
         <div class="card-title">{{ project.title }}</div>
       </div>
-      <div class="card-preview"><span>preview</span></div>
-      <div class="card-body">{{ project.excerpt | strip_html | truncate: 140 }}</div>
+      <div class="card-preview">
+        {% if project.image %}
+          <video autoplay muted loop playsinline src="{{ project.image | relative_url }}"></video>
+        {% else %}
+          <span>preview</span>
+        {% endif %}
+      </div>
+      <div class="card-body">{{ project.description | default: project.excerpt | strip_html | truncate: 140 }}</div>
       <div class="card-keywords">
         {% for tag in project.tags %}
         <span>{{ tag }}</span>

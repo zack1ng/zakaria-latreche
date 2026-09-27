@@ -6,7 +6,13 @@ layout: default
   <div class="tag {{ page.status }}">{{ page.status | upcase }}</div>
 </div>
 
-<div class="detail-hero"><span>preview</span></div>
+<div class="detail-hero">
+  {% if page.image %}
+    <video autoplay muted loop playsinline src="{{ page.image | relative_url }}"></video>
+  {% else %}
+    <span>preview</span>
+  {% endif %}
+</div>
 
 <div class="detail-keywords">
   {% for tag in page.tags %}
