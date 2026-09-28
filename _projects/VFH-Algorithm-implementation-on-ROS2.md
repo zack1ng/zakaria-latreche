@@ -2,7 +2,7 @@
 title: VFH Algorithm implementation on ROS2
 status: open
 tags: [ROS2, VFH, Local Planer, Object Avoidance]
-image: /assets/projects/output.mp4
+image: https://github.com/zack1ng/zakaria-latreche/releases/download/media-v1/output.mp4
 layout: project
 description: VFH algorithm implimentation as a local planner for object avoidance on ROS2 using a LiDAR as a sensor.
 ---
