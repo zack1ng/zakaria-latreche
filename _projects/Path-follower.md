@@ -2,6 +2,7 @@
 title: Path finder & follower
 status: open
 tags: [ROS2, PID, Control systems, Computer Vision]
+image: /assets/projects/path_follower/path_vfh.mp4
 layout: project
 ---
 
