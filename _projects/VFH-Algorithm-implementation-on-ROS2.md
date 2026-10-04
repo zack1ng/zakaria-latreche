@@ -1,10 +1,11 @@
 ---
-title: VFH Algorithm implementation on ROS2
+title: VFH Algorithm Implementation for Obstacle Avoidance in ROS2
 status: open
-tags: [ROS2, VFH, Local Planer, Object Avoidance]
-image: https://github.com/zack1ng/zakaria-latreche/releases/download/media-v1/output.mp4
+tags: [VFH, Local Planner, Obstacle Avoidance, ROS2, GZ]
+image: https://github.com/zack1ng/zakaria-latreche/releases/download/vfh/frame_vfh.mp4
+demo_video: https://github.com/zack1ng/zakaria-latreche/releases/download/media-v1/output.mp4
 layout: project
-description: VFH algorithm implimentation as a local planner for object avoidance on ROS2 using a LiDAR as a sensor.
+description: This article describes how the VFH algorithm works and how it can be integrated with ROS2 using Gazebo Fortress as the simulator. We show how VFH builds a perception of its environment using the robot radius and a polar histogram. The algorithm has been tested using a LiDAR with multiple configurations, showing which configuration is the most suited for us. 
 ---
 
 What is VFH ?

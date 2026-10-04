@@ -175,7 +175,7 @@
   }
 
   .card-preview{
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     height: auto;
     border-bottom: 1px solid var(--rule);
     overflow: hidden;
@@ -216,9 +216,28 @@
     color: var(--blueprint);
   }
 
-  .kw-embedded{ color: var(--blueprint); }
-  .kw-ros{ color: var(--blueprint); }
-  .kw-algo{ color: var(--blueprint); }
+  .detail-keywords span.kw-ros{ color: #6FAE83; }
+  .detail-keywords span.kw-pid{ color: #FFFF00; }
+  .detail-keywords span.kw-vfh{ color: #00FFFF; }
+  .detail-keywords span.kw-localplanner{ color: #008080; }
+  .detail-keywords span.kw-obsavoid{ color: #87CEEB; }
+  .detail-keywords span.kw-gz{ color: #FFA500; }
+  .detail-keywords span.kw-bt{ color: #00FF00; }
+  .detail-keywords span.kw-ctrlsys{ color: #800080; }
+  .detail-keywords span.kw-cpv{ color: #FF00FF; }
+
+
+  .card-keywords span.kw-ros{ color: #6FAE83; }
+  .card-keywords span.kw-pid{ color: #FFFF00; }
+  .card-keywords span.kw-vfh{ color: #00FFFF; }
+  .card-keywords span.kw-localplanner{ color: #008080; }
+  .card-keywords span.kw-obsavoid{ color: #87CEEB; }
+  .card-keywords span.kw-gz{ color: #FFA500; }
+  .card-keywords span.kw-bt{ color: #00FF00; }
+  .card-keywords span.kw-ctrlsys{ color: #800080; }
+  .card-keywords span.kw-cpv{ color: #FF00FF; }
+
+
 
   .card-foot{
     padding: 10px 14px;

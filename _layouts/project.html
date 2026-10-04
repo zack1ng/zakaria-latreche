@@ -8,7 +8,7 @@ layout: default
 
 <div class="detail-hero">
   {% if page.image %}
-    <video autoplay muted loop playsinline src="{{ page.image | relative_url }}"></video>
+    <video autoplay muted loop playsinline src="{{ page.demo_video | relative_url }}"></video>
   {% else %}
     <span>preview</span>
   {% endif %}
@@ -16,7 +16,28 @@ layout: default
 
 <div class="detail-keywords">
   {% for tag in page.tags %}
-    <span>{{ tag }}</span>
+    {% case tag %}
+      {% when "ROS2" %}
+        <span class="kw-ros">{{ tag }}</span>
+      {% when "PID" %}
+        <span class="kw-pid">{{ tag }}</span>
+      {% when "VFH" %}
+        <span class="kw-vfh">{{ tag }}</span>
+      {% when "Local Planner" %}
+        <span class="kw-localplanner">{{ tag }}</span>
+      {% when "Obstacle Avoidance" %}
+        <span class="kw-obsavoid">{{ tag }}</span>
+      {% when "GZ" %}
+        <span class="kw-gz">{{ tag }}</span>
+      {% when "BT" %}
+        <span class="kw-bt">{{ tag }}</span>
+      {% when "Control Systems" %}
+        <span class="kw-ctrlsys">{{ tag }}</span>
+      {% when "Computer Vision" %}
+        <span class="kw-cpv">{{ tag }}</span>
+      {% else %}
+        <span>{{ tag }}</span>
+    {% endcase %}
   {% endfor %}
 </div>
 

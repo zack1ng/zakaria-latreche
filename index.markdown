@@ -43,10 +43,31 @@ title: Home
           <span>preview</span>
         {% endif %}
       </div>
-      <div class="card-body">{{ project.description | default: project.excerpt | strip_html | truncate: 140 }}</div>
+      <div class="card-body">{{ project.description | default: project.excerpt | strip_html | truncate: 750 }}</div>
       <div class="card-keywords">
         {% for tag in project.tags %}
-        <span>{{ tag }}</span>
+          {% case tag %}
+            {% when "ROS2" %}
+              <span class="kw-ros">{{ tag }}</span>
+            {% when "PID" %}
+              <span class="kw-pid">{{ tag }}</span>
+            {% when "VFH" %}
+              <span class="kw-vfh">{{ tag }}</span>
+            {% when "Local Planner" %}
+              <span class="kw-localplanner">{{ tag }}</span>
+            {% when "Obstacle Avoidance" %}
+              <span class="kw-obsavoid">{{ tag }}</span>
+            {% when "GZ" %}
+              <span class="kw-gz">{{ tag }}</span>
+            {% when "BT" %}
+              <span class="kw-bt">{{ tag }}</span>
+            {% when "Control Systems" %}
+              <span class="kw-ctrlsys">{{ tag }}</span>
+            {% when "Computer Vision" %}
+              <span class="kw-cpv">{{ tag }}</span>
+            {% else %}
+             <span>{{ tag }}</span>
+          {% endcase %}
         {% endfor %}
       </div>
     </a>
