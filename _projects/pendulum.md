@@ -1,8 +1,10 @@
 ---
-title: Inverted Pendulum Control
-status: open
-tags: [ros2_control, Gazebo, PID]
+title: Energy-Based Swing-Up Inverted Pendulum Using LQR Controller for Stabilization
+status: closed
+tags: [LQR, Control Systems, Energy Pumping, ROS2, GZ]
+image: https://github.com/zack1ng/zakaria-latreche/releases/download/swingup_pendulum/swingup_pendulum_19.mp4
 layout: project
+description: This project discusses the control of a swing-up inverted pendulum using an energy-based approach and an LQR controller. It covers the implementation in ROS2, starting with ros2_control and the choice of the ros2_control interface. Presents the mathematical model of the system, starting with the dynamics derived using the Lagrangian equation, followed by linearization. A pumping force approach is used to reach the upright equilibrium state, then the system switches to the LQR controller for stabilization.
 ---
 
 ## Overview

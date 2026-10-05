@@ -31,7 +31,11 @@ title: Home
 <section id="projects">
   <div class="grid">
     {% for project in site.projects %}
+    {% if project.status == "closed" %}
+    <div class="card {{ project.status }}">
+    {% else %}
     <a class="card {{ project.status }}" href="{{ project.url | relative_url }}">
+    {% endif %}
       <div class="card-top">
         <div class="tag {{ project.status }}">{{ project.status | upcase }}</div>
         <div class="card-title">{{ project.title }}</div>
@@ -70,7 +74,11 @@ title: Home
           {% endcase %}
         {% endfor %}
       </div>
+    {% if project.status == "closed" %}
+    </div>
+    {% else %}
     </a>
+    {% endif %}
     {% endfor %}
   </div>
 </section>
