@@ -7,8 +7,13 @@ layout: default
 </div>
 
 <div class="detail-hero">
-  {% if page.image %}
-    <video autoplay muted loop playsinline src="{{ page.demo_video | relative_url }}"></video>
+  {% if page.demo_video %}
+    {% assign ext = page.demo_video | split: '.' | last %}
+    {% if ext == "mp4" or ext == "webm" %}
+      <video autoplay muted loop playsinline src="{{ page.demo_video | relative_url }}"></video>
+    {% else %}
+      <img src="{{ page.demo_video | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
   {% else %}
     <span>preview</span>
   {% endif %}

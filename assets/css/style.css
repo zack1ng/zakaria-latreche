@@ -57,7 +57,7 @@
 
   .intro{
     padding: 20px 0 40px;
-    max-width: 110ch;
+    max-width: 135ch;
     margin: 0 auto;
     text-align: center;
   }
@@ -226,7 +226,9 @@
   .detail-keywords span.kw-bt{ color: #00FF00; }
   .detail-keywords span.kw-ctrlsys{ color: #800080; }
   .detail-keywords span.kw-cpv{ color: #FF00FF; }
-
+  .detail-keywords span.kw-amp{ color: #D3D3D3; }
+  .detail-keywords span.kw-filter{ color: #6082B6; }
+  .detail-keywords span.kw-analog{ color: #1F51FF; }
 
   .card-keywords span.kw-ros{ color: #6FAE83; }
   .card-keywords span.kw-pid{ color: #FFFF00; }
@@ -237,6 +239,9 @@
   .card-keywords span.kw-bt{ color: #00FF00; }
   .card-keywords span.kw-ctrlsys{ color: #800080; }
   .card-keywords span.kw-cpv{ color: #FF00FF; }
+  .card-keywords span.kw-amp{ color: #D3D3D3; }
+  .card-keywords span.kw-filter{ color: #6082B6; }
+  .card-keywords span.kw-analog{ color: #1F51FF; }
 
 
 
@@ -439,7 +444,14 @@
 }
 .intro .desc{
   font-size: 15px;
-  max-width: 90ch;
+  max-width: 115ch;
   margin: 0 auto 16px;
   text-align: justify;
+}
+
+.card-preview img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

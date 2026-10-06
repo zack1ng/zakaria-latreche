@@ -6,6 +6,7 @@ image: /assets/projects/path_follower/frame_path_vfh.mp4
 demo_video: /assets/projects/path_follower/path_vfh_preview_x2.mp4
 layout: project
 description: 4-wheeled differential-drive robot for path following and obstacle avoidance. The angular velocity is controlled using a PID controller, and the VFH algorithm is used as a local planner to avoid objects within a safety range. Behaviour tree (BT) is used to manage decisions based on the actual situation.
+order: 1
 ---
 
 Three-term controller is among the most used controllers. It is a feedback-based control loop mechanism, and it is widely used with physical and non-physical systems. Thanks to its closed-loop architecture, the controller automatically compares the set point (desired value) with the actual value our system is outputting [1].

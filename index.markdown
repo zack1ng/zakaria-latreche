@@ -32,7 +32,8 @@ balancing hardware and software skills, and I thrive in collaborative projects w
 
 <section id="projects">
   <div class="grid">
-    {% for project in site.projects %}
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for project in sorted_projects %}
     {% if project.status == "closed" %}
     <div class="card {{ project.status }}">
     {% else %}
@@ -44,7 +45,12 @@ balancing hardware and software skills, and I thrive in collaborative projects w
       </div>
       <div class="card-preview">
         {% if project.image %}
-          <video autoplay muted loop playsinline src="{{ project.image | relative_url }}"></video>
+          {% assign ext = project.image | split: '.' | last %}
+          {% if ext == "mp4" or ext == "webm" %}
+            <video autoplay muted loop playsinline src="{{ project.image | relative_url }}"></video>
+          {% else %}
+            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+          {% endif %}
         {% else %}
           <span>preview</span>
         {% endif %}
@@ -71,6 +77,12 @@ balancing hardware and software skills, and I thrive in collaborative projects w
               <span class="kw-ctrlsys">{{ tag }}</span>
             {% when "Computer Vision" %}
               <span class="kw-cpv">{{ tag }}</span>
+            {% when "Op-Amp" %}
+              <span class="kw-amp">{{ tag }}</span>
+            {% when "Low-pass Filter" %}
+              <span class="kw-filter">{{ tag }}</span>
+            {% when "Analog" %}
+              <span class="kw-analog">{{ tag }}</span>
             {% else %}
              <span>{{ tag }}</span>
           {% endcase %}
