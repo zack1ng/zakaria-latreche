@@ -4,15 +4,17 @@ title: Home
 ---
 
 <div class="intro">
-  <p class="roles">Embedded Systems Engineer | Robotics Software (self-taught)</p>
-  <p>I'm working toward robotics software engineering by building the layer
-  between hardware and behavior — STM32 drivers, sensor fusion, and ROS2
-  control stacks for robots that have to actually move. No formal program;
-  everything below runs on real boards or in simulation.</p>
-  <p class="cta">Interested in embedded robotics or ROS2 control architecture? Let's talk.</p>
+  <h1 class="name">Zakaria Latreche</h1>
+  <p class="roles">Mechatronics Engineer | Robotics & Embedded Systems</p>
+  <p class="desc">Electronics and robotics enthusiast with a strong passion for bringing ideas to life. Currently pursuing a Master’s degree in
+Advanced Mechatronics at Polytech Annecy-Chambéry, I’ve developed solid expertise in PCB design, embedded systems
+programming, and autonomous robot development using ROS. What truly drives me is transforming concepts into functional
+systemswhether it’s a competitive RoboCup robot or a miniaturized IoT sensor. I particularly enjoy challenges that require
+balancing hardware and software skills, and I thrive in collaborative projects where creativity meets technical rigor.</p>
+  <p class="cta"></p>
   <div class="links">
-    github: <a href="https://github.com/" target="_blank" rel="noopener">@yourhandle</a><br>
-    email: <a href="mailto:you@example.dev">you [at] example [dot] dev</a>
+    github: <a href="https://github.com/" target="zack1ng" rel="noopener">@zack1ng</a><br>
+    email: <a href="mailto:zakaria.latreche@etu.univ-smb.fr">zakaria.latreche [at] etu.univ-smb [dot] fr</a>
   </div>
 </div>
 {% assign latest = site.posts.first %}
